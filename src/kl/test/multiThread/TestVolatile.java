@@ -24,7 +24,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 *由于多线程下，有些结果可能要很多次测试才会出现，所以testVi(int count)就是用来测试count次的
 * @author K.L
  */
-public class volatileTest {
+public class TestVolatile {
 	
 	static volatile int vi = 0;
 	static AtomicInteger finishCount = new AtomicInteger(0);
