@@ -1,8 +1,29 @@
-package kl.test.mutilThread;
+package kl.test.multiThread;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-
+/**
+***┏┓           ┏┓
+*┏┛┻━━━┛┻┓
+*┃                          ┃
+*┃           ━           ┃
+*┃     ┳┛  ┗┳    ┃
+*┃                          ┃
+*┃ ``` ┻   ```┃
+*┃                         ┃
+*┗━┓          ┏━┛
+*****┃       ┃Code is far away from bug with the animal protecting.
+*****┃       ┃神兽护佑,代码无bug.
+*****┃       ┗━━━━  ┓
+*****┃                            ┣┓
+*****┃                            ┏┛
+*****┗ ┓ ┓┏━┳┓┏┛
+*******┃┫┫    ┃┫┫
+*******┗┻┛    ┗┻┛
+*N条线程，每条线程都对vi进行perAddCount次加1操作。看看最后结果是否等于N * perAddCount
+*由于多线程下，有些结果可能要很多次测试才会出现，所以testVi(int count)就是用来测试count次的
+* @author K.L
+ */
 public class volatileTest {
 	
 	static volatile int vi = 0;
